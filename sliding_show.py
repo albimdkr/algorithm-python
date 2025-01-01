@@ -17,6 +17,8 @@ def sliding_show(nums, k):
     print(f"Save current_sum to max_sum: {max_sum}")
     
     # Geser jendela sepanjang array
+    # current_sum + nums[i]
+    # current_sum - nums[i - k]
     for i in range(k, len(nums)):
         # Tambahkan elemen baru dan kurang elemen lama
         current_sum += nums[i] - nums[i - k]
